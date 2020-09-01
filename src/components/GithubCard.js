@@ -22,6 +22,11 @@ const useStyles = theme => ({
   'pic': {
     width: '350px',
     height: '350px',
+  },
+  'chart': {
+    width: '450px',
+    height: '150px',
+    'background-size': 'contain',
   }
 });
 
@@ -98,6 +103,10 @@ class GithubCard extends React.Component {
           <Typography>
             Repos: {this.state.data.public_repos}
           </Typography>
+          <CardMedia
+            className={classes.chart}
+            image={`http://ghchart.rshah.org/${this.state.data.login}`}
+          /> 
         </CardContent>
       </Card>
       </Paper>

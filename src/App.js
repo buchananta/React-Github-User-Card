@@ -63,7 +63,10 @@ class App extends React.Component {
               Search
             </Button>
           </form>
-          <GithubCard url='https://api.github.com/users/{this.state.person}' />
+          <GithubCard 
+            url={'https://api.github.com/users/'+ this.state.person}
+            key={this.state.person}
+          />
           {this.state.cardData.map((data) => {
             return <GithubCard
                       key={data.login}
